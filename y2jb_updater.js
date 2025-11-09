@@ -7,6 +7,30 @@ const TARGET_DIR = "/download0/cache/splash_screen/aHR0cHM6Ly93d3cueW91dHViZS5jb
 
 const LARGE_FILE_THRESHOLD = 100 * 1024; 
 
+async function closeYouTubeApp() {
+    try {
+        await log("=== Closing YouTube app ===");
+
+        await log("Applying updates...");
+        
+        const SYS_GETPID = 0x14n;
+        const SYS_KILL = 0x25n; 
+        const SIGKILL = 0x9n;  
+        
+        const pid = syscall(SYS_GETPID);
+        await log("Current PID: " + toHex(pid));
+        
+        await log("Sending SIGKILL to close the app...");
+        
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        
+        syscall(SYS_KILL, pid, SIGKILL);
+    } catch (e) {
+        await log("ERROR closing YouTube: " + e.message);
+        send_notification("Failed to close app: " + e.message);
+    }
+}
+
 async function main() {
     try {
         await log("=== Y2JB Updater Payload ===");
@@ -195,6 +219,12 @@ async function main() {
         await log(`=== Update complete! Updated: ${success_count}, Failed: ${fail_count} ===`);
 
         send_notification(`Y2JB Updater Complete!\n${success_count} files updated.`);
+        
+
+        if (fail_count === 0) {
+          await closeYouTubeApp();
+        }
+        
     } catch (e) {
         await log(`ERROR: ${e.message}`);
         await log(e.stack);

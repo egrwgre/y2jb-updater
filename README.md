@@ -52,5 +52,5 @@ This project provides a payload and an HTTP server used for updating the Y2JB fi
     python3 payload_sender.py <PS5_IP> <PS5_PORT> payloads/y2jb_updater.js
     ```
 
-3. **Restart the Youtube APP:**
-    Just restart the app, and it will have the updated files.
+3. **Reopen the Youtube APP:**
+    If all files are updated successfully, the app will automatically close. Next time you open, it will use the files that you sent.
