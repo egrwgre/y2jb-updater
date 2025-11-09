@@ -9,7 +9,7 @@ from pathlib import Path
 PORT = 9090
 SOURCE_DIR = Path("download0/cache/splash_screen/aHR0cHM6Ly93d3cueW91dHViZS5jb20vdHY=")
 
-class HybridUpdateHandler(http.server.SimpleHTTPRequestHandler):
+class UpdateHandler(http.server.SimpleHTTPRequestHandler):
     
     def do_GET(self):
         if self.path == "/list_all_with_sizes":
@@ -67,9 +67,7 @@ class HybridUpdateHandler(http.server.SimpleHTTPRequestHandler):
         pass 
 
 def main():
-    print("=" * 60)
-    print("Y2JB Update Server")
-    print("=" * 60)
+    print("=== Y2JB Update Server ===")
     if not SOURCE_DIR.is_dir():
         print(f"ERROR: Source directory not found at '{SOURCE_DIR}'")
         print("Please make sure you are running this script from the root of the Y2JB repository.")
@@ -77,13 +75,12 @@ def main():
         
     print(f"Serving files from: {SOURCE_DIR.resolve()}")
     print(f"Starting server on port {PORT}...")
-    print("=" * 60)
     print(f"\nServer running at http://0.0.0.0:{PORT}")
     print("Waiting for PS5 connection...\n")
     
     socketserver.TCPServer.allow_reuse_address = True
     
-    with socketserver.TCPServer(("", PORT), HybridUpdateHandler) as httpd:
+    with socketserver.TCPServer(("", PORT), UpdateHandler) as httpd:
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:

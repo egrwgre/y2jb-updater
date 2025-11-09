@@ -90,8 +90,10 @@ async function main() {
 
             const local_path_str = alloc_string(`${TARGET_DIR}/${filename}`);
             syscall(SYSCALL.unlink, local_path_str);
+
+            const mode = (filename === 'splash.html') ? 0x124n : 0x1FFn;
             
-            const fd = BigInt.asIntN(64, syscall(SYSCALL.open, local_path_str, O_WRONLY | O_CREATE | O_TRUNC, 0x1FFn));
+            const fd = BigInt.asIntN(64, syscall(SYSCALL.open, local_path_str, O_WRONLY | O_CREATE | O_TRUNC, mode));
             if (fd < 0) { await log(`- Failed to open file, error: ${fd}`); return false; }
             
             const write_buf = malloc(file_data.length);
@@ -113,8 +115,10 @@ async function main() {
             
             const local_path_str = alloc_string(`${TARGET_DIR}/${filename}`);
             syscall(SYSCALL.unlink, local_path_str);
+
+            const mode = (filename === 'splash.html') ? 0x124n : 0x1FFn;
             
-            const fd = BigInt.asIntN(64, syscall(SYSCALL.open, local_path_str, O_WRONLY | O_CREATE | O_TRUNC, 0x1FFn));
+            const fd = BigInt.asIntN(64, syscall(SYSCALL.open, local_path_str, O_WRONLY | O_CREATE | O_TRUNC, mode));
             if (fd < 0) { await log(`- Failed to open file, error: ${fd}`); syscall(SYSCALL.close, sock); return false; }
             
             const buffer = malloc(8192);
